@@ -10,3 +10,7 @@ class CourseResponse(BaseModel):
     days : int
     roadmap : dict
     resources : list[str]
+
+class Resource(BaseModel):
+    title:str
+    url:str
