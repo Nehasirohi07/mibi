@@ -1,6 +1,15 @@
 def generate_exam(topic):
     return[
-        f"what is {topic}?",
-        f"Explain core concepts of {topic}",
-        f"Build a mini project using{topic}"
+        {
+            "question":f"what is {topic}",
+            "type":"theory"
+        },
+        {
+            "question":f"Explain important concepts of {topic}",
+            "type":"theory"
+        },
+        {
+            "question":f"Build a mini project using {topic}",
+            "type":"practical"
+        }
     ]
