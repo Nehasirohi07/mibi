@@ -1,5 +1,9 @@
 from pydantic import BaseModel
 
+class ExamQuestion(BaseModel):
+    question: str
+    type: str
+
 
 class CourseRequest(BaseModel):
     topic : str
@@ -10,6 +14,7 @@ class CourseResponse(BaseModel):
     days : int
     roadmap : dict
     resources : list[str]
+    exam: list[ExamQuestion]
 
 class Resource(BaseModel):
     title:str
